@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lemonade_Stand
+namespace LemonadeStand
 {
-    class Program
+    class Customer
     {
-        static void Main(string[] args)
-        {
-        }
+       // List<string> names;
+       //string name;
     }
 }

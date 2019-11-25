@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand_3DayStarter
+namespace LemonadeStand
 {
-    class Wallet
+    public class Wallet
     {
         private double money;
 

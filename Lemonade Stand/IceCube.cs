@@ -4,22 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LemonadeStand_3DayStarter
+namespace LemonadeStand
 {
-    class Lemon : Item
+    public class IceCube : Item
     {
         // member variables (HAS A)
 
         // constructor (SPAWNER)
-        public Lemon()
+        public IceCube()
         {
-            name = "lemon";
+            name = "ice cube";
         }
 
         // member methods (CAN DO)

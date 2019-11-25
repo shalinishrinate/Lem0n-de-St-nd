@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand_3DayStarter
+namespace LemonadeStand
 {
-    class IceCube : Item
+    public class Cup : Item
     {
         // member variables (HAS A)
 
+
         // constructor (SPAWNER)
-        public IceCube()
+        public Cup()
         {
-            name = "ice cube";
+            name = "cup";
         }
 
         // member methods (CAN DO)
     }
 }
-

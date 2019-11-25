@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand_3DayStarter
+namespace LemonadeStand
 {
-    class Cup : Item
+    abstract class Item
     {
         // member variables (HAS A)
+        public string name;
 
         // constructor (SPAWNER)
-        public Cup()
+        static Item()
         {
-            name = "cup";
+
         }
 
         // member methods (CAN DO)

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand_3DayStarter
+namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
         // member variables (HAS A)
         public List<Lemon> lemons;

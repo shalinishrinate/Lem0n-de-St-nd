@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lemonade_Stand
+namespace LemonadeStand
 {
-    class SugarCube
+    public class Pitcher
     {
+        int cupsLeftInPitcher;
     }
 }
