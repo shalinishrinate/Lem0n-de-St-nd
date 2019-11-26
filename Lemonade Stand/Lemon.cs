@@ -8,8 +8,7 @@ namespace LemonadeStand
 {
     public class Lemon:Item
     {
-        class Lemon : Item
-        {
+          
             // member variables (HAS A)
 
             // constructor (SPAWNER)
@@ -21,4 +20,4 @@ namespace LemonadeStand
             // member methods (CAN DO)
         }
     }
-}
+
