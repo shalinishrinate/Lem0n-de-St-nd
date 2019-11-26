@@ -10,7 +10,8 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Weather weather = new Weather();
+            //Weather weather = new Weather();
+            Day day = new Day();
         }
     }
 }

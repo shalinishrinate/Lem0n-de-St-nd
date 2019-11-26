@@ -8,7 +8,30 @@ namespace LemonadeStand
 {
     public class Customer
     {
-       List<string> names;
-       string name;
+        //member variables
+      // List<string> names;
+       public string name;
+
+        public List<string> names = new List<string>()
+        {
+            "Messi","Pique","Suarez","Umtiti","Griezmann","De Jong","Dembele","Vidal",
+            "Perez","Rakitic","Ter Stegen","Busquets","Alba","Lenglet","Semedo","Roberto","Rodriguez"
+        };
+
+        public Customer()
+        {
+        
+        }
+
+        //member methods
+
+        public void CreateName()
+        {
+            Random namePicking = new Random();
+            int potentialNames = namePicking.Next(0, 17);
+            name = names[potentialNames];
+        }
+
+
     }
 }

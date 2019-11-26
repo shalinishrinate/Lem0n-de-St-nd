@@ -32,15 +32,13 @@ namespace LemonadeStand
             weatherConditions.Add("Barcelona Bliss");
             weatherConditions.Add("London Cloud");
             weatherConditions.Add("Chicago Wind");
-            weatherConditions.Add("Wisconsin Winter");
+            weatherConditions.Add("Wisconsin Cold");
 
             Random rng = new Random();
             int randomcondition = rng.Next(weatherConditions.Count);
 
             condition = weatherConditions[randomcondition];
 
-            // choose a weatherConditions
-            // set 'condition' member variable
         }
 
         public void CreateTemperature()
@@ -75,7 +73,7 @@ namespace LemonadeStand
                 temperature = rng.Next(30, 50);
             }
 
-            else if (condition == "Wisconsin Winter")
+            else if (condition == "Wisconsin Cold")
             {
                 Random rng = new Random();
                 temperature = rng.Next(10, 30);
