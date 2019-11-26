@@ -8,9 +8,15 @@ namespace LemonadeStand
 {
     public class SugarCube : Item
     {
+        //member variables (HAS A)
+
+        //constructor
         public SugarCube()
         {
             name = "sugar cube";
         }
+
+        //member method (CAN DO)
+
     }
 }
