@@ -30,7 +30,10 @@ namespace LemonadeStand
         public void RunGame()  // master method
         {
             DisplayGameIntroduction();
-            
+            // create days
+
+            //start the first day:
+                // sending the player to the store:
 
 
         }

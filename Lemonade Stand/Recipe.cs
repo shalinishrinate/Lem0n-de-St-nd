@@ -47,10 +47,6 @@ namespace LemonadeStand
             pricePerCup = UserInterface.PricePerCup();
         }
 
-
-
-
     }
 
-    
 }

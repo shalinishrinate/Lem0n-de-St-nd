@@ -46,10 +46,10 @@ namespace LemonadeStand
             return amountofIceCubes;
         }
 
-        public static double PricePerCup()
+        public static int PricePerCup()
         {
             Console.WriteLine(" Please enter your price per cup.");
-            double pricePerCup = Convert.ToInt32(Console.ReadLine());
+            int pricePerCup = Convert.ToInt32(Console.ReadLine());
             return pricePerCup;
         }
     }
