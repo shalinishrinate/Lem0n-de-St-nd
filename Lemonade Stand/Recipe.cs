@@ -26,6 +26,27 @@ namespace LemonadeStand
 
         //member method
 
+        public void AmountOfLemons()
+        {
+            amountOfLemons = UserInterface.AmountOfLemons();
+        }
+
+        public void AmountOfSugarCubes()
+        {
+            amountOfSugarCubes = UserInterface.AmountOfSugarCubes();
+        }
+
+
+        public void AmountOfIceCubes()
+        {
+            amountOfIceCubes = UserInterface.AmountOfIceCubes();
+        }
+        
+        public void PricePerCup()
+        {
+            pricePerCup = UserInterface.PricePerCup();
+        }
+
 
 
 

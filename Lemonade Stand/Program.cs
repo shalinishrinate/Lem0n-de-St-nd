@@ -10,6 +10,8 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
+
             //Weather weather = new Weather();
             Day day = new Day();
         }

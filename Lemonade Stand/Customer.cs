@@ -14,13 +14,13 @@ namespace LemonadeStand
 
         public List<string> names = new List<string>()
         {
-            "Messi","Pique","Suarez","Umtiti","Griezmann","De Jong","Dembele","Vidal",
-            "Perez","Rakitic","Ter Stegen","Busquets","Alba","Lenglet","Semedo","Roberto","Rodriguez"
+            "Messi","Pique","Suarez","Umtiti","Griezmann","De Jong","Dembele","Vidal","Perez","Rakitic",
+            "Ter Stegen","Busquets","Alba","Lenglet","Semedo","Roberto","Rodriguez"
         };
 
         public Customer()
         {
-        
+            names = new List<string>();
         }
 
         //member methods

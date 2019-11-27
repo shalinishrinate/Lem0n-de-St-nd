@@ -22,6 +22,35 @@ namespace LemonadeStand
             }
 
             return quantityOfItem;
+
+        }
+
+        public static int AmountOfLemons()
+        {
+            Console.WriteLine("Please enter how many lemons would you like in your recipe?");
+            int amountofLemons = Convert.ToInt32(Console.ReadLine());
+            return amountofLemons;
+        }
+
+        public static int AmountOfSugarCubes()
+        {
+            Console.WriteLine("Please enter how many sugar cubes would you like in your recipe?");
+            int amountofSugarCubes = Convert.ToInt32(Console.ReadLine());
+            return amountofSugarCubes;
+        }
+
+        public static int AmountOfIceCubes()
+        {
+            Console.WriteLine("Please enter how many ice cubes would you like in your recipe?");
+            int amountofIceCubes = Convert.ToInt32(Console.ReadLine());
+            return amountofIceCubes;
+        }
+
+        public static double PricePerCup()
+        {
+            Console.WriteLine(" Please enter your price per cup.");
+            double pricePerCup = Convert.ToInt32(Console.ReadLine());
+            return pricePerCup;
         }
     }
 }

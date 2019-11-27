@@ -34,8 +34,8 @@ namespace LemonadeStand
             weatherConditions.Add("Chicago Wind");
             weatherConditions.Add("Wisconsin Cold");
 
-            Random rng = new Random();
-            int randomcondition = rng.Next(weatherConditions.Count);
+            Random pickCondition = new Random();
+            int randomcondition = pickCondition.Next(weatherConditions.Count);
 
             condition = weatherConditions[randomcondition];
 
@@ -45,38 +45,38 @@ namespace LemonadeStand
         {
             if (condition == "Dubai Heat")
             {
-                Random rng = new Random();
-                temperature = rng.Next(120, 140);             
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(120, 140);             
             }
 
             else if (condition == "Delhi Sun")
             {
-                Random rng = new Random();
-                temperature = rng.Next(100, 120);
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(100, 120);
             }
 
             else if (condition == "Barcelona Bliss")
             {
-                Random rng = new Random();
-                temperature = rng.Next(70, 100);
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(70, 100);
             }
 
             else if (condition == "London Cloud")
             {
-                Random rng = new Random();
-                temperature = rng.Next(50, 70);
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(50, 70);
             }
 
             else if (condition == "Chicago Wind")
             {
-                Random rng = new Random();
-                temperature = rng.Next(30, 50);
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(30, 50);
             }
 
             else if (condition == "Wisconsin Cold")
             {
-                Random rng = new Random();
-                temperature = rng.Next(10, 30);
+                Random pickTemp = new Random();
+                temperature = pickTemp.Next(10, 30);
             }
 
         }
