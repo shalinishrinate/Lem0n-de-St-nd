@@ -8,6 +8,7 @@ namespace LemonadeStand
 {
     static class UserInterface
     {
+
         public static int GetNumberOfItems(string itemsToGet)
         {
             bool userInputIsAnInteger = false;
@@ -52,5 +53,8 @@ namespace LemonadeStand
             int pricePerCup = Convert.ToInt32(Console.ReadLine());
             return pricePerCup;
         }
+
+        
+
     }
 }

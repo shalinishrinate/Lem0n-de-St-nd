@@ -20,8 +20,7 @@ namespace LemonadeStand
         // constructor
         public Game()
         {
-            Day day = new Day();
-            days.Add(day);
+           
         }
 
 
@@ -37,7 +36,28 @@ namespace LemonadeStand
 
 
         }
-        public void DisplayGameIntroduction()
+
+        public void CreateDays()
+        {
+
+            days = new List<Day>();
+
+            Day day = new Day();
+            for (int i = 0; i <= 7; i++)
+            {
+                day = new Day();
+
+                days.Add(day);
+
+            }
+        }
+
+
+
+
+
+
+            public void DisplayGameIntroduction()
         {
             Console.WriteLine("Welcome! We are so happy to see to come and play LEMONADE STAND");
 
@@ -45,9 +65,11 @@ namespace LemonadeStand
 
             Console.WriteLine("You get to buy ....");
 
-            Console.WriteLine("At the end of the game, you'll see how much money you made. "); 
-               
+            Console.WriteLine("At the end of the game, you'll see how much money you made. ");
+
             Console.WriteLine("Want to better your last score, play again!");
+
+
         }
     }
 }
