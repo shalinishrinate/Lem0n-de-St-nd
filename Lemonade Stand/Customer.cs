@@ -9,7 +9,7 @@ namespace LemonadeStand
     public class Customer
     {
         //member variables
-      // List<string> names;
+      
        public string name;
 
         public List<string> names = new List<string>()
@@ -21,6 +21,7 @@ namespace LemonadeStand
         public Customer()
         {
             names = new List<string>();
+            CreateName();
         }
 
         //member methods

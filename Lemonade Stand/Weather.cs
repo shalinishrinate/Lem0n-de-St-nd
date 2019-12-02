@@ -12,7 +12,7 @@ namespace LemonadeStand
 
         public string condition; 
         public int temperature;
-       // public List<string> weatherConditions;
+     
 
         //constructor
         public Weather()
@@ -21,7 +21,7 @@ namespace LemonadeStand
             CreateTemperature();
         }
 
-        //method (CAN DO)
+         //method (CAN DO)
         public void CreateWeatherConditions()
         {
 
@@ -35,7 +35,7 @@ namespace LemonadeStand
             weatherConditions.Add("Wisconsin Cold");
 
             Random pickCondition = new Random();
-            int randomcondition = pickCondition.Next(weatherConditions.Count);
+            int randomcondition = pickCondition.Next(weatherConditions.Count);   // List.Count Property is used to get the total number of elements contained in the List.
 
             condition = weatherConditions[randomcondition];
 
@@ -46,7 +46,7 @@ namespace LemonadeStand
             if (condition == "Dubai Heat")
             {
                 Random pickTemp = new Random();
-                temperature = pickTemp.Next(120, 140);             
+                temperature = pickTemp.Next(120, 140);          // have put a range of temperation for each weather condition   
             }
 
             else if (condition == "Delhi Sun")

@@ -26,6 +26,8 @@ namespace LemonadeStand
 
         //member method
 
+        
+
         public void CreateCustomerWalkIns()
         {
             if (weather.condition == "Dubai Heat")
