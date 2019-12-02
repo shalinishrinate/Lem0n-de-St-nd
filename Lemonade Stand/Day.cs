@@ -13,6 +13,8 @@ namespace LemonadeStand
         public Weather weather;
         public List<Customer> customers;
         public int customerWalkIns;
+        public Recipe recipe;
+        public Game game;
 
 
         //constructor
@@ -21,11 +23,29 @@ namespace LemonadeStand
             weather = new Weather();
             CreateCustomerWalkIns();
             CreateCustomers();
+            
 
         }
 
         //member method
+        public void RunDay()
+        {
+            //1. Go To Store
+            //1.5 
+            //2. Set Recipe 
+            //3. Sell Lemonade
+            //4. Staticstics// how much money
 
+           
+
+            game.DisplayGameIntroduction();
+            UserInterface.ShowMoney(player);
+            UserInterface.PlayerInventory(inventory);
+            UserInterface.StoreMenu();
+            recipe.CreateRecipe();
+            Store.SellLemons();
+            Store.
+        }
         
 
         public void CreateCustomerWalkIns()

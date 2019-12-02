@@ -12,13 +12,20 @@ namespace LemonadeStand
 
         public string condition; 
         public int temperature;
-     
+        public int todaysActualLow;
+        public int todaysActualHigh;
+        public int actualTemperature;
+        public string actualweather;
+
+
 
         //constructor
         public Weather()
         {
             CreateWeatherConditions();
             CreateTemperature();
+            CreateActualWeather();
+            DisplayActualWeather();
         }
 
          //method (CAN DO)
@@ -79,6 +86,29 @@ namespace LemonadeStand
                 temperature = pickTemp.Next(10, 30);
             }
 
+        }
+        public void CreateActualWeather()
+        {
+             //ActualWeather = ActualTemperature + WeatherCondition - 
+            //should be working on this for what actual weather will be like
+            //taking into account fluctuations in temperature, the daily highs and lows will change
+
+            int temperatureFluctuation = 5;
+
+            todaysActualLow = temperature - temperatureFluctuation;
+            todaysActualHigh = temperature + temperatureFluctuation;
+
+            Random pickTemp = new Random();
+            actualTemperature = pickTemp.Next(todaysActualLow, todaysActualHigh);
+
+            actualweather = (condition + " and " + actualTemperature);
+
+        }
+        
+        public void DisplayActualWeather()
+        {
+
+            Console.WriteLine("Today's weather is: " + actualweather);
         }
 
     }

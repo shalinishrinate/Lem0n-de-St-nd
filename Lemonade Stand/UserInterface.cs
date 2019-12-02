@@ -57,44 +57,55 @@ namespace LemonadeStand
             return pricePerCup;
         }
 
-        public static int ShowMoney()
+        public static void ShowMoney(Player player)
         {
+
+            Console.WriteLine(" You have $" + player.wallet.Money);
             //the 1 day run game should run like this
             //first the player should see how much money he has, then the inventory, 
             //for which then he has to see the store menu
             //this should show me how much money I have to buy inventory
 
-            return showMoney;
+            
         }
 
-        public static int PlayerInventory()
+        public static void PlayerInventory(Inventory inventory)
         {
             //this should show me/player the inventory of lemons, sugar, ice and cups
 
-            return playerInventory;
+            Console.WriteLine("You have " + inventory.lemons.Count + " lemons");
+
+            Console.WriteLine("You have " + inventory.sugarCubes.Count + " sugarcubes");
+
+            Console.WriteLine("You have " + inventory.iceCubes.Count + " icecubes");
+
+            Console.WriteLine("You have " + inventory.cups.Count + " cups");
+
+
         }
 
-        public static string StoreMenu()
+        public static void StoreMenu(Store store)
         {
             Console.WriteLine("Welcome to your Friendly Neighborhood store.Please let us know what would you like to buy?\n" +
-                             "Please enter the item you would like to buy today.\n" +
+                             "Please type the item you would like to buy today.\n" +
                              "Lemons, Sugar, Cubes, Cups.\n" +
                              "Enter quit to exit game.");
+
             string storeItemsToBuy = Console.ReadLine().ToLower();
 
             switch (storeItemsToBuy)
             {
                 case "lemons":
-                    Console.WriteLine("The cost of Lemons is $ " + store.PricePerLemon + " each.");
+                    Console.WriteLine("The cost of Lemons is $ " + store.PricePerLemon + " per piece.");
                     break;
                 case "sugar":
-                    Console.WriteLine("The cost of SugarCubes is $ " + store.PricePerSugarCube + " each.");
+                    Console.WriteLine("The cost of SugarCubes is $ " + store.PricePerSugarCube + " per piece.");
                     break;
                 case "cubes":
-                    Console.WriteLine("The cost of IceCubes is $ " + store.PricePerIceCube + " each.");
+                    Console.WriteLine("The cost of IceCubes is $ " + store.PricePerIceCube + " per piece.");
                     break;
                 case "cups":
-                    Console.WriteLine("The cost of Cups is $ " + store.PricePerCup + " each.");
+                    Console.WriteLine("The cost of Cups is $ " + store.PricePerCup + " per piece.");
                     break;
                 case "quit":
                     Environment.Exit(0);
@@ -106,7 +117,10 @@ namespace LemonadeStand
 
 
 
-        
+
+
+
+        }
 
     }
 }
