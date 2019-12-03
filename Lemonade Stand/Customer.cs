@@ -23,7 +23,7 @@ namespace LemonadeStand
         int customerSugarCubePreferance;
         int customerIceCubePreferance;
         int customerTemperaturePreferance;
-        //int customerPricePreferance;
+        double customerPricePreferance;
 
         public Customer(Random rnd)
         {
@@ -45,8 +45,11 @@ namespace LemonadeStand
         {
             customerLemonPreferance = random.Next(1, 11);
             customerIceCubePreferance = random.Next(1, 11);
-            customerSugarCubePreferance = random.Next(1, 11);
+            customerSugarCubePreferance = random.Next(1, 31);
             customerTemperaturePreferance = random.Next(20, 141);
+            customerPricePreferance = random.Next(10,100);
+            
+           
         }
         
         public bool WillTheCustomerBuyLemonade(Recipe recipe, Weather weather)
@@ -54,6 +57,7 @@ namespace LemonadeStand
             if (recipe.amountOfLemons >= customerLemonPreferance &&
                 recipe.amountOfSugarCubes >= customerSugarCubePreferance &&
                 recipe.amountOfIceCubes >= customerIceCubePreferance &&
+                (recipe.pricePerCup <= customerPricePreferance)&&
                 (weather.temperature >= customerTemperaturePreferance - 5 ||
                 weather.temperature <= customerTemperaturePreferance + 5))
             {
