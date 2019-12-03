@@ -13,6 +13,7 @@ namespace LemonadeStand
         private double pricePerSugarCube;
         private double pricePerIceCube;
         private double pricePerCup;
+
         public double PricePerLemon
         {
             get
@@ -98,15 +99,6 @@ namespace LemonadeStand
                 PerformTransaction(player.wallet, transactionAmount);
                 player.inventory.AddCupsToInventory(cupsToPurchase);
             }
-        }
-
-        public void SellLemonade(Player player)
-        {
-            SellLemons();
-            SellSugarCubes();
-            SellIceCubes();
-            SellCups();
-
         }
 
         private double CalculateTransactionAmount(int itemCount, double itemPricePerUnit)

@@ -25,8 +25,7 @@ namespace LemonadeStand
         //Removes a range of elements from the List< T >.
 
         //public void RemoveRange(int index, int count);
-        // index Int32 : The zero - based starting index of the range of elements to remove.
-        //in this case it should be the inventory.
+        // index Int32 : The zero - based starting index of the range of elements to remove.in this case it should be the inventory.
 
         //count Int32 : The number of elements to remove.
         //in this case it should be amountof lemons etc mentioned in the recipe.

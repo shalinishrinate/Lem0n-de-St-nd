@@ -27,5 +27,10 @@ namespace LemonadeStand
         {
             money -= transactionAmount;
         }
+
+        public void DisplayBalanceMoney()
+        {
+            Console.WriteLine("Your balance money is : " + money );
+        }
     }
 }

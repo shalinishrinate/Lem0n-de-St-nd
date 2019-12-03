@@ -15,15 +15,17 @@ namespace LemonadeStand
         public int todaysActualLow;
         public int todaysActualHigh;
         public int actualTemperature;
-        public string actualweather;
-
-
+        public string actualWeather;
+        public string forecast;
+        Random pickTemp;
 
         //constructor
-        public Weather()
+        public Weather(Random rnd)
         {
+            pickTemp = rnd;
             CreateWeatherConditions();
             CreateTemperature();
+            DisplayForecast();
             CreateActualWeather();
             DisplayActualWeather();
         }
@@ -41,10 +43,9 @@ namespace LemonadeStand
             weatherConditions.Add("Chicago Wind");
             weatherConditions.Add("Wisconsin Cold");
 
-            Random pickCondition = new Random();
-            int randomcondition = pickCondition.Next(weatherConditions.Count);   // List.Count Property is used to get the total number of elements contained in the List.
+            int randomCondition = pickTemp.Next(weatherConditions.Count);   // List.Count Property is used to get the total number of elements contained in the List.
 
-            condition = weatherConditions[randomcondition];
+            condition = weatherConditions[randomCondition];
 
         }
 
@@ -52,41 +53,53 @@ namespace LemonadeStand
         {
             if (condition == "Dubai Heat")
             {
-                Random pickTemp = new Random();
+
                 temperature = pickTemp.Next(120, 140);          // have put a range of temperation for each weather condition   
+                forecast = (condition + " and " + temperature); // forecast will be the expected weather condition and tempeture
             }
 
             else if (condition == "Delhi Sun")
             {
-                Random pickTemp = new Random();
+             
                 temperature = pickTemp.Next(100, 120);
+                forecast = (condition + " and " + temperature);
             }
 
             else if (condition == "Barcelona Bliss")
             {
-                Random pickTemp = new Random();
-                temperature = pickTemp.Next(70, 100);
+   
+                temperature = pickTemp.Next(80, 100);
+                forecast = (condition + " and " + temperature);
             }
 
             else if (condition == "London Cloud")
             {
-                Random pickTemp = new Random();
-                temperature = pickTemp.Next(50, 70);
+
+                temperature = pickTemp.Next(60, 80);
+                forecast = (condition + " and " + temperature);
             }
 
             else if (condition == "Chicago Wind")
             {
-                Random pickTemp = new Random();
-                temperature = pickTemp.Next(30, 50);
+  
+                temperature = pickTemp.Next(40, 60);
+                forecast = (condition + " and " + temperature);
             }
 
             else if (condition == "Wisconsin Cold")
             {
-                Random pickTemp = new Random();
-                temperature = pickTemp.Next(10, 30);
+       
+                temperature = pickTemp.Next(20, 40);
+                forecast = (condition + " and " + temperature);
             }
 
         }
+
+        public void DisplayForecast()
+        {
+            Console.WriteLine(" Today's forecast is: " + forecast);
+        }
+
         public void CreateActualWeather()
         {
              //ActualWeather = ActualTemperature + WeatherCondition - 
@@ -98,18 +111,18 @@ namespace LemonadeStand
             todaysActualLow = temperature - temperatureFluctuation;
             todaysActualHigh = temperature + temperatureFluctuation;
 
-            Random pickTemp = new Random();
+      
             actualTemperature = pickTemp.Next(todaysActualLow, todaysActualHigh);
 
-            actualweather = (condition + " and " + actualTemperature);
+            actualWeather = (condition + " and " + actualTemperature);
 
         }
         
         public void DisplayActualWeather()
         {
-
-            Console.WriteLine("Today's weather is: " + actualweather);
+            Console.WriteLine(" Today's weather is: " + actualWeather);
         }
 
+        
     }
 }

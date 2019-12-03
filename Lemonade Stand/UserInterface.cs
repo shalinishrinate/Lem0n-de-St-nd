@@ -9,9 +9,6 @@ namespace LemonadeStand
     static class UserInterface
     {
         
-
-
-
         public static int GetNumberOfItems(string itemsToGet)
         {
             bool userInputIsAnInteger = false;
@@ -59,14 +56,7 @@ namespace LemonadeStand
 
         public static void ShowMoney(Player player)
         {
-
-            Console.WriteLine(" You have $" + player.wallet.Money);
-            //the 1 day run game should run like this
-            //first the player should see how much money he has, then the inventory, 
-            //for which then he has to see the store menu
-            //this should show me how much money I have to buy inventory
-
-            
+            Console.WriteLine(" You have $" + player.wallet.Money); 
         }
 
         public static void PlayerInventory(Inventory inventory)
@@ -84,42 +74,57 @@ namespace LemonadeStand
 
         }
 
-        public static void StoreMenu(Store store)
+        //public static void StoreMenu(Store store)
+        //{
+        //    Console.WriteLine("Please let us know what would you like to buy?\n" +
+        //                     "Please type the item you would like to buy today.\n" +
+        //                     "Lemons, Sugar, Cubes, Cups.\n" +
+        //                     "Enter quit to exit game.");
+
+        //    string storeItemsToBuy = Console.ReadLine().ToLower();
+
+        //    switch (storeItemsToBuy)
+        //    {
+        //        case "lemons":
+        //            Console.WriteLine("The cost of Lemons is $ " + store.PricePerLemon + " per piece.");
+        //            break;
+        //        case "sugar":
+        //            Console.WriteLine("The cost of SugarCubes is $ " + store.PricePerSugarCube + " per piece.");
+        //            break;
+        //        case "cubes":
+        //            Console.WriteLine("The cost of IceCubes is $ " + store.PricePerIceCube + " per piece.");
+        //            break;
+        //        case "cups":
+        //            Console.WriteLine("The cost of Cups is $ " + store.PricePerCup + " per piece.");
+        //            break;
+        //        case "quit":
+        //            Environment.Exit(0);
+        //            break;
+        //        default:
+        //            Console.WriteLine("Please enter a valid item");
+        //            break;
+        //    }
+
+        //}
+
+        public static void DisplayGameIntroduction()
         {
-            Console.WriteLine("Welcome to your Friendly Neighborhood store.Please let us know what would you like to buy?\n" +
-                             "Please type the item you would like to buy today.\n" +
-                             "Lemons, Sugar, Cubes, Cups.\n" +
-                             "Enter quit to exit game.");
+            Console.WriteLine("Welcome! We are so happy to see you come and play LEMONADE STAND");
 
-            string storeItemsToBuy = Console.ReadLine().ToLower();
+            Console.WriteLine("Your goal is to make as much money as you can in 7 days by selling " +
+                               "lemonade at your lemonade stand.");
 
-            switch (storeItemsToBuy)
-            {
-                case "lemons":
-                    Console.WriteLine("The cost of Lemons is $ " + store.PricePerLemon + " per piece.");
-                    break;
-                case "sugar":
-                    Console.WriteLine("The cost of SugarCubes is $ " + store.PricePerSugarCube + " per piece.");
-                    break;
-                case "cubes":
-                    Console.WriteLine("The cost of IceCubes is $ " + store.PricePerIceCube + " per piece.");
-                    break;
-                case "cups":
-                    Console.WriteLine("The cost of Cups is $ " + store.PricePerCup + " per piece.");
-                    break;
-                case "quit":
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Please enter a valid item");
-                    break;
-            }
+            Console.WriteLine("You will be given $20 at the beginning to go buy the inventory");
 
+            Console.WriteLine("You get to decide your recipe for that special lemonade you want to sell.");
 
+            Console.WriteLine("Do remember that weather conditions and temperature play " +
+                              "a big role in detemining the number of potential customers.");
 
+            Console.WriteLine("At the end of the game, you'll see how much money you made. ");
 
-
-
+            //Console.WriteLine("Want to better your last score, play again!");
+        
         }
 
     }

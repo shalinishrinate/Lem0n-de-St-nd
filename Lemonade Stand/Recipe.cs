@@ -26,20 +26,53 @@ namespace LemonadeStand
 
         //member method
 
-        public void AmountOfLemons()
+        public void AmountOfLemons(Inventory inventory)
         {
             amountOfLemons = UserInterface.AmountOfLemons();
+
+            if (amountOfLemons > inventory.lemons.Count)
+            {
+                Console.WriteLine("Sorry but you do not have enough number of lemons in your inventory. Please type an amount equal or less than what you bought.");
+                
+            }
+
+            else
+            {
+                Console.WriteLine("You have now added " + amountOfLemons + " lemons to your recipe.");
+            }
         }
 
-        public void AmountOfSugarCubes()
+        public void AmountOfSugarCubes(Inventory inventory)
         {
             amountOfSugarCubes = UserInterface.AmountOfSugarCubes();
+
+            if (amountOfSugarCubes > inventory.sugarCubes.Count)
+            {
+                Console.WriteLine("Sorry but you do not have enough number of sugar cubes in your inventory. Please type an amount equal or less than what you bought.");
+
+            }
+
+            else
+            {
+                Console.WriteLine("You have now added " + amountOfSugarCubes + " sugar cubes to your recipe.");
+            }
         }
 
 
-        public void AmountOfIceCubes()
+        public void AmountOfIceCubes(Inventory inventory)
         {
             amountOfIceCubes = UserInterface.AmountOfIceCubes();
+
+            if (amountOfIceCubes > inventory.iceCubes.Count)
+            {
+                Console.WriteLine("Sorry but you do not have enough number of ice cubes in your inventory. Please type an amount equal or less than what you bought.");
+
+            }
+
+            else
+            {
+                Console.WriteLine("You have now added " + amountOfIceCubes + " ice cubes to your recipe.");
+            }
         }
         
         public void PricePerCup()
@@ -47,13 +80,13 @@ namespace LemonadeStand
             pricePerCup = UserInterface.PricePerCup();
         }
 
-        public void CreateRecipe()
-        {
-            AmountOfLemons();
-            AmountOfSugarCubes();
-            AmountOfIceCubes();
-            PricePerCup();
-        }
+        //public void CreateRecipe()
+        //{
+        //    AmountOfLemons();
+        //    AmountOfSugarCubes();
+        //    AmountOfIceCubes();
+        //    PricePerCup();
+        //}
 
     }
 
