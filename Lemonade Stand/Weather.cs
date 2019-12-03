@@ -25,9 +25,9 @@ namespace LemonadeStand
             pickTemp = rnd;
             CreateWeatherConditions();
             CreateTemperature();
-            DisplayForecast();
+    
             CreateActualWeather();
-            DisplayActualWeather();
+     
         }
 
          //method (CAN DO)

@@ -39,6 +39,7 @@ namespace LemonadeStand
             else
             {
                 Console.WriteLine("You have now added " + amountOfLemons + " lemons to your recipe.");
+
             }
         }
 
@@ -80,13 +81,7 @@ namespace LemonadeStand
             pricePerCup = UserInterface.PricePerCup();
         }
 
-        //public void CreateRecipe()
-        //{
-        //    AmountOfLemons();
-        //    AmountOfSugarCubes();
-        //    AmountOfIceCubes();
-        //    PricePerCup();
-        //}
+   
 
     }
 

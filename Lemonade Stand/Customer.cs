@@ -11,6 +11,7 @@ namespace LemonadeStand
         //member variables
 
         public string name;
+        public Random random;
 
         public List<string> names = new List<string>()
         {
@@ -21,67 +22,40 @@ namespace LemonadeStand
         int customerLemonPreferance;
         int customerSugarCubePreferance;
         int customerIceCubePreferance;
-        int customerTempPreferance;
+        int customerTemperaturePreferance;
         //int customerPricePreferance;
 
-        public Customer()
-        { 
-
+        public Customer(Random rnd)
+        {
+            random = rnd;
             CreateName();
+            CustomerPreferences();
         }
 
         //member methods
 
         public void CreateName()
         {
-            Random namePicking = new Random();
-            int potentialNames = namePicking.Next(0, 17);
+            
+            int potentialNames = random.Next(0, 17);
             name = names[potentialNames];
         }
 
-        public void CustomerLemonPreferance()
+        public void CustomerPreferences() // instead of asking questions, randomly generating preferance now.
         {
-            Console.WriteLine("How many lemons would you prefer in your cup?");
-            customerLemonPreferance = int.Parse(Console.ReadLine());
+            customerLemonPreferance = random.Next(1, 11);
+            customerIceCubePreferance = random.Next(1, 11);
+            customerSugarCubePreferance = random.Next(1, 11);
+            customerTemperaturePreferance = random.Next(20, 141);
         }
-
-        public void CustomerSugarCubePreferance()
-        {
-            Console.WriteLine("How many Sugar cubes would you prefer in your cup?");
-            customerSugarCubePreferance = int.Parse(Console.ReadLine());
-        }
-
-        public void CustomerIceCubesPreferance()
-        {
-            Console.WriteLine("How many Ice cubes would you prefer in your cup?");
-            customerIceCubePreferance = int.Parse(Console.ReadLine());
-        }
-
-        public void CustomerTempPreferance()
-        {
-            Console.WriteLine("What is the temperature that best suits your likelihood to buy lemonade?");
-            customerTempPreferance = int.Parse(Console.ReadLine());
-
-        }
-
-
-
-                 //public void CustomerPricePreferance()
-                 //{
-                    //    Console.WriteLine("What is the ideal price you will pay for lemonade?");
-                    //    customerPricePreferance = int.Parse(Console.ReadLine());
-                // 
-                //    not sure now if this the right way to get input, the input 
-
         
-
         public bool WillTheCustomerBuyLemonade(Recipe recipe, Weather weather)
         {
             if (recipe.amountOfLemons >= customerLemonPreferance &&
                 recipe.amountOfSugarCubes >= customerSugarCubePreferance &&
                 recipe.amountOfIceCubes >= customerIceCubePreferance &&
-                (weather.temperature >= customerTempPreferance - 5 ||
-                weather.temperature <= customerTempPreferance + 5))
+                (weather.temperature >= customerTemperaturePreferance - 5 ||
+                weather.temperature <= customerTemperaturePreferance + 5))
             {
                 return true;
             }

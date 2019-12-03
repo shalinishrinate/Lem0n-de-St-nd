@@ -19,6 +19,7 @@ namespace LemonadeStand
         public Recipe recipe;
         public Inventory inventory;
         public double transactionAmount;
+        public Customer customer;
         
  
 
@@ -29,11 +30,9 @@ namespace LemonadeStand
             store = new Store();
             player = new Player();
             recipe = new Recipe();
-        
+            customer = new Customer();
             pitcher = new Pitcher();
  
-            
-
            CreateDays();
         }
 
@@ -42,9 +41,11 @@ namespace LemonadeStand
 
         public void RunGame()
         {
+            UserInterface.DisplayGameIntroduction(); // put it here so that it does not display everyday of game playing.
+
             for (int i = 0; i < 7; i++)
             {
-                days[i].RunDay(player, store,inventory,recipe, transactionAmount);
+                days[i].RunDay(player, store,inventory,recipe, transactionAmount,customer);
             }
 
         }
@@ -61,7 +62,6 @@ namespace LemonadeStand
                 day = new Day(player, store, rnd);
 
                 days.Add(day);
-
             }
         }
     }

@@ -12,7 +12,7 @@ namespace LemonadeStand
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
-        public Pitcher pitcher;
+        public Pitcher pitcher = new Pitcher();
         public string name;
 
         // constructor (SPAWNER)
