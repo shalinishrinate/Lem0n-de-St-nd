@@ -16,6 +16,10 @@ namespace LemonadeStand
             {
                 return money;
             }
+            set
+            {
+                money = value;
+            }
         }
 
         public Wallet()

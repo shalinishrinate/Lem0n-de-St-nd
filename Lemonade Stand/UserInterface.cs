@@ -84,11 +84,11 @@ namespace LemonadeStand
 
             Console.WriteLine();
 
-            Console.WriteLine("At the end of the game, you'll see how much money you made. ");
+            Console.WriteLine("At the end of the game, you'll see how much money you madeor lost! ");
 
             Console.WriteLine();
 
-            //Console.WriteLine("Want to better your last score, play again!");
+         
         
         }
 

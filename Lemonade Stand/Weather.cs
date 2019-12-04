@@ -32,7 +32,7 @@ namespace LemonadeStand
          //method (CAN DO)
         public void CreateWeatherConditions()
         {
-
+            // SOLID can add weather conditions as and when required, functioality would not change
             List<string> weatherConditions = new List<string>();
 
             weatherConditions.Add("Dubai Heat");

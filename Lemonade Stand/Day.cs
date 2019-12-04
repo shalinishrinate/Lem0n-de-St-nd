@@ -26,7 +26,7 @@ namespace LemonadeStand
         public Day(Player player, Store store, Random rnd)
         {
             weather = new Weather(rnd);
-            
+            //customer = new Customer(rnd);
         }
 
         //member method
@@ -57,8 +57,7 @@ namespace LemonadeStand
             CreateCustomerWalkIns();
             CreateCustomers();
 
-
-            //sell lemonade
+            customer.SellLemonade(player, recipe,inventory);
 
             DailyIncome(player);
             AddIncomeToWallet(player.wallet);
