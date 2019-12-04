@@ -25,7 +25,6 @@ namespace LemonadeStand
             pickTemp = rnd;
             CreateWeatherConditions();
             CreateTemperature();
-    
             CreateActualWeather();
      
         }
@@ -44,7 +43,6 @@ namespace LemonadeStand
             weatherConditions.Add("Wisconsin Cold");
 
             int randomCondition = pickTemp.Next(weatherConditions.Count);   // List.Count Property is used to get the total number of elements contained in the List.
-
             condition = weatherConditions[randomCondition];
 
         }

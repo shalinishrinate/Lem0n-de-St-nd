@@ -26,10 +26,7 @@ namespace LemonadeStand
         public Day(Player player, Store store, Random rnd)
         {
             weather = new Weather(rnd);
-            //CreateCustomerWalkIns();
-            //CreateCustomers();
             
-
         }
 
         //member method

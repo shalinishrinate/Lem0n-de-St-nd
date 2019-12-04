@@ -33,13 +33,11 @@ namespace LemonadeStand
             if (amountOfLemons > inventory.lemons.Count)
             {
                 Console.WriteLine("Sorry but you do not have enough number of lemons in your inventory. Please type an amount equal or less than what you bought.");
-                
             }
 
             else
             {
                 Console.WriteLine("You have now added " + amountOfLemons + " lemons to your recipe.");
-
             }
         }
 
@@ -50,7 +48,6 @@ namespace LemonadeStand
             if (amountOfSugarCubes > inventory.sugarCubes.Count)
             {
                 Console.WriteLine("Sorry but you do not have enough number of sugar cubes in your inventory. Please type an amount equal or less than what you bought.");
-
             }
 
             else
@@ -67,7 +64,6 @@ namespace LemonadeStand
             if (amountOfIceCubes > inventory.iceCubes.Count)
             {
                 Console.WriteLine("Sorry but you do not have enough number of ice cubes in your inventory. Please type an amount equal or less than what you bought.");
-
             }
 
             else

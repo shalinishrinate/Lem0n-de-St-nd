@@ -9,6 +9,10 @@ namespace LemonadeStand
     public class Pitcher
     {
         int cupsLeftInPitcher;
+        int remainingLemons;
+        int remainingSugarCubes;
+        int remainingIceCubes;
+        int remainingCups;
 
 
         //constructor
@@ -35,9 +39,41 @@ namespace LemonadeStand
             inventory.sugarCubes.RemoveRange(0, recipe.amountOfSugarCubes);
             inventory.iceCubes.RemoveRange(0, recipe.amountOfIceCubes);
 
-            //while playing this game on coolmathgames, it mentioned 12 cups make a pitcher,so going by it
-            cupsLeftInPitcher = 12;
+            cupsLeftInPitcher = 12; //while playing this game on coolmathgames, it mentioned 12 cups make a pitcher,so going by it
 
+        }
+
+        public void RefillPitcher(Inventory inventory, Recipe recipe, Store store, Player player, Day day)
+        {
+            if (inventory.lemons.Count < recipe.amountOfLemons)
+            {
+                Console.WriteLine("Uh-ho.. you have run out of lemons.");
+            }
+
+            else if (inventory.sugarCubes.Count < recipe.amountOfSugarCubes)
+            {
+                Console.WriteLine("Uh-ho.. you have run out of sugar cubes.");
+            }
+
+            else if (inventory.iceCubes.Count < recipe.amountOfIceCubes)
+            {
+                Console.WriteLine("Uh-ho.. you have run out of ice cubes.");
+            }
+            
+            else
+            {
+                CreatePitcher(inventory, recipe);
+            }
+            
+        }
+
+        public void DisplayLeftoverInventory(Inventory inventory)
+        { 
+            remainingLemons = inventory.lemons.Count();
+            remainingSugarCubes = inventory.sugarCubes.Count();
+            remainingIceCubes = inventory.iceCubes.Count();                   
+            remainingCups = inventory.cups.Count();
+            Console.WriteLine("You have " + remainingLemons + " lemons, " + remainingSugarCubes + " sugar cubes, " + remainingIceCubes + " ice cubes and " + remainingCups + "cups in your inventory.");
         }
 
 

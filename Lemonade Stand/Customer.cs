@@ -25,6 +25,10 @@ namespace LemonadeStand
         int customerTemperaturePreferance;
         double customerPricePreferance;
 
+        public Customer()
+        {
+        }
+
         public Customer(Random rnd)
         {
             random = rnd;
@@ -47,9 +51,7 @@ namespace LemonadeStand
             customerIceCubePreferance = random.Next(1, 11);
             customerSugarCubePreferance = random.Next(1, 31);
             customerTemperaturePreferance = random.Next(20, 141);
-            customerPricePreferance = random.Next(10,100);
-            
-           
+            customerPricePreferance = random.Next(10,100); 
         }
         
         public bool WillTheCustomerBuyLemonade(Recipe recipe, Weather weather)
